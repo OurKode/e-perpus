@@ -37,26 +37,146 @@ async function seed() {
 
         console.log("Creating dummy books...");
         const dummyBooks = [
-            { code: "B001", title: "The Great Gatsby", stock: 5, location: "A1" },
-            { code: "B002", title: "1984", stock: 3, location: "A2" },
-            { code: "B003", title: "To Kill a Mockingbird", stock: 7, location: "B1" },
-            { code: "B004", title: "Pride and Prejudice", stock: 2, location: "B2" },
-            { code: "B005", title: "The Catcher in the Rye", stock: 4, location: "C1" },
-            { code: "B006", title: "The Hobbit", stock: 6, location: "C2" },
-            { code: "B007", title: "Fahrenheit 451", stock: 5, location: "D1" },
-            { code: "B008", title: "Lord of the Flies", stock: 3, location: "D2" },
-            { code: "B009", title: "Animal Farm", stock: 8, location: "E1" },
-            { code: "B010", title: "Brave New World", stock: 4, location: "E2" },
+            {
+                code: "B001",
+                title: "Laskar Pelangi",
+                author: "Andrea Hirata",
+                publisher: "Bentang Pustaka",
+                publishedYear: 2005,
+                isbn: "978-979-3062-79-1",
+                totalPages: 529,
+                dimensions: "13 x 20 cm",
+                edition: "Cetakan Pertama",
+                stock: 12,
+                location: "A1"
+            },
+            {
+                code: "B002",
+                title: "Bumi Manusia",
+                author: "Pramoedya Ananta Toer",
+                publisher: "Lentera Dipantara",
+                publishedYear: 1980,
+                isbn: "978-979-97312-3-2",
+                totalPages: 535,
+                dimensions: "14 x 21 cm",
+                edition: "Cetakan 17",
+                stock: 8,
+                location: "A2"
+            },
+            {
+                code: "B003",
+                title: "Laut Bercerita",
+                author: "Leila S. Chudori",
+                publisher: "KPG (Kepustakaan Populer Gramedia)",
+                publishedYear: 2017,
+                isbn: "978-602-424-694-5",
+                totalPages: 394,
+                dimensions: "13.5 x 20 cm",
+                edition: "Cetakan 2",
+                stock: 15,
+                location: "B1"
+            },
+            {
+                code: "B004",
+                title: "Pulang",
+                author: "Tere Liye",
+                publisher: "Republika Penerbit",
+                publishedYear: 2015,
+                isbn: "978-602-0822-12-9",
+                totalPages: 404,
+                dimensions: "14 x 20.5 cm",
+                edition: "Original",
+                stock: 10,
+                location: "B2"
+            },
+            {
+                code: "B005",
+                title: "Cantik Itu Luka",
+                author: "Eka Kurniawan",
+                publisher: "Gramedia Pustaka Utama",
+                publishedYear: 2002,
+                isbn: "978-602-03-1258-3",
+                totalPages: 537,
+                dimensions: "14 x 21 cm",
+                edition: "Cetakan Ulang",
+                stock: 6,
+                location: "C1"
+            },
+            {
+                code: "B006",
+                title: "Dilan: Dia adalah Dilanku Tahun 1990",
+                author: "Pidi Baiq",
+                publisher: "Pastel Books",
+                publishedYear: 2014,
+                isbn: "978-602-7870-41-3",
+                totalPages: 348,
+                dimensions: "14 x 21 cm",
+                edition: "Softcover",
+                stock: 20,
+                location: "C2"
+            },
+            {
+                code: "B007",
+                title: "Negeri 5 Menara",
+                author: "A. Fuadi",
+                publisher: "Gramedia Pustaka Utama",
+                publishedYear: 2009,
+                isbn: "978-979-22-4861-6",
+                totalPages: 423,
+                dimensions: "13.5 x 20 cm",
+                edition: "Cetakan 1",
+                stock: 9,
+                location: "D1"
+            },
+            {
+                code: "B008",
+                title: "Perahu Kertas",
+                author: "Dee Lestari",
+                publisher: "Bentang Pustaka",
+                publishedYear: 2009,
+                isbn: "978-979-1227-78-0",
+                totalPages: 444,
+                dimensions: "13 x 20 cm",
+                edition: "Cetakan 1",
+                stock: 7,
+                location: "D2"
+            },
+            {
+                code: "B009",
+                title: "Ronggeng Dukuh Paruk",
+                author: "Ahmad Tohari",
+                publisher: "Gramedia Pustaka Utama",
+                publishedYear: 1982,
+                isbn: "978-979-22-0196-3",
+                totalPages: 408,
+                dimensions: "14 x 21 cm",
+                edition: "Trilogi Lengkap",
+                stock: 4,
+                location: "E1"
+            },
+            {
+                code: "B010",
+                title: "Ayat-Ayat Cinta",
+                author: "Habiburrahman El Shirazy",
+                publisher: "Republika Penerbit",
+                publishedYear: 2004,
+                isbn: "978-979-3210-44-2",
+                totalPages: 418,
+                dimensions: "13.5 x 20.5 cm",
+                edition: "Hardcover",
+                stock: 14,
+                location: "E2"
+            },
         ];
         await db.insert(books).values(dummyBooks);
 
         console.log("Creating dummy members...");
         const dummyMembers = [
-            { name: "John Doe", phone: "08123456789" },
-            { name: "Jane Smith", phone: "08198765432" },
-            { name: "Alice Johnson", phone: "08122334455" },
-            { name: "Bob Brown", phone: "08199887766" },
-            { name: "Charlie Davis", phone: "08155566677" },
+            { name: "Siti Aminah", phone: "08123456789" },
+            { name: "Budi Santoso", phone: "08198765432" },
+            { name: "Rina Wati", phone: "08122334455" },
+            { name: "Ahmad Fauzi", phone: "08199887766" },
+            { name: "Dewi Lestari", phone: "08155566677" },
         ];
         await db.insert(members).values(dummyMembers);
 

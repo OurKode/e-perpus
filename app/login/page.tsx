@@ -60,7 +60,7 @@ export default function LoginPage() {
                 <div className="flex flex-col items-center mb-8 text-center pt-2">
                     <img src="/logo.png" alt="Logo" className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-emerald-100" />
                     <h1 className={`text-3xl font-bold tracking-tight mb-2 text-foreground ${playfair.className}`}>
-                        MTs Aisyiyah
+                        Aisyiyah
                     </h1>
                     <p className="text-muted-foreground text-sm">
                         Sign in to access your administrative dashboard.
@@ -119,7 +119,7 @@ export default function LoginPage() {
                     </form>
                 </Form>
                 <div className="mt-6 text-center text-xs text-muted-foreground/60">
-                    &copy; {new Date().getFullYear()} AULTERNUM MANAGEMENT SYSTEM | MTs Aisyiyah
+                    &copy; {new Date().getFullYear()} AULTERNUM MANAGEMENT SYSTEM | Aisyiyah Binjai
                 </div>
             </motion.div>
         </div>
