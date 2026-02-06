@@ -22,6 +22,13 @@ export const books = sqliteTable("books", {
     id: integer("id").primaryKey({ autoIncrement: true }),
     code: text("code").unique().notNull(),
     title: text("title").notNull(),
+    author: text("author"),
+    publisher: text("publisher"),
+    publishedYear: integer("published_year"),
+    isbn: text("isbn"),
+    totalPages: integer("total_pages"),
+    dimensions: text("dimensions"),
+    edition: text("edition"),
     stock: integer("stock").default(0).notNull(),
     location: text("location"),
 });

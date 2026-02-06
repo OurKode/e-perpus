@@ -9,6 +9,13 @@ import { books } from "@/db/schema";
 const bookSchema = z.object({
     code: z.string().min(1),
     title: z.string().min(1),
+    author: z.string().optional(),
+    publisher: z.string().optional(),
+    publishedYear: z.coerce.number().optional(),
+    isbn: z.string().optional(),
+    totalPages: z.coerce.number().optional(),
+    dimensions: z.string().optional(),
+    edition: z.string().optional(),
     stock: z.coerce.number().min(0),
     location: z.string().optional(),
 });
@@ -25,6 +32,13 @@ export async function createBook(formData: FormData) {
         await db.insert(books).values({
             code: validation.data.code,
             title: validation.data.title,
+            author: validation.data.author || "",
+            publisher: validation.data.publisher || "",
+            publishedYear: validation.data.publishedYear || null,
+            isbn: validation.data.isbn || "",
+            totalPages: validation.data.totalPages || null,
+            dimensions: validation.data.dimensions || "",
+            edition: validation.data.edition || "",
             stock: validation.data.stock,
             location: validation.data.location || "",
         });
@@ -61,6 +75,13 @@ export async function updateBook(id: number, formData: FormData) {
             .set({
                 code: validation.data.code,
                 title: validation.data.title,
+                author: validation.data.author || "",
+                publisher: validation.data.publisher || "",
+                publishedYear: validation.data.publishedYear || null,
+                isbn: validation.data.isbn || "",
+                totalPages: validation.data.totalPages || null,
+                dimensions: validation.data.dimensions || "",
+                edition: validation.data.edition || "",
                 stock: validation.data.stock,
                 location: validation.data.location || "",
             })
