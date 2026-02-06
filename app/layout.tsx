@@ -24,11 +24,6 @@ export const metadata: Metadata = {
     template: "%s | MTs Aisyiyah Library",
   },
   description: "Sistem Informasi Perpustakaan Digital MTs Aisyiyah.",
-  icons: {
-    icon: "/icon.ico",
-    shortcut: "/icon.ico",
-    apple: "/apple-icon.png",
-  },
 };
 
 function Sidebar() {
