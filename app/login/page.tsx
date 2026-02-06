@@ -58,7 +58,7 @@ export default function LoginPage() {
                 className="relative z-10 w-full max-w-[420px] p-8 rounded-xl bg-white shadow-xl shadow-emerald-100/50 border border-border"
             >
                 <div className="flex flex-col items-center mb-8 text-center pt-2">
-                    <img src="/logo.jpg" alt="Logo" className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-emerald-100" />
+                    <img src="/logo.png" alt="Logo" className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-emerald-100" />
                     <h1 className={`text-3xl font-bold tracking-tight mb-2 text-foreground ${playfair.className}`}>
                         MTs Aisyiyah
                     </h1>

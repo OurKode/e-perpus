@@ -34,7 +34,7 @@ function Sidebar() {
         <div className="px-3 py-2">
           {/* Brand */}
           <div className="mb-8 px-4 flex items-center gap-3">
-            <img src="/logo.jpg" alt="Logo" className="w-10 h-10 rounded-lg object-cover shadow-sm shadow-emerald-200" />
+            <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-lg object-cover shadow-sm shadow-emerald-200" />
             <h2 className={`text-xl font-bold tracking-tight text-sidebar-foreground ${playfair.className}`}>
               MTs Aisyiyah
             </h2>
