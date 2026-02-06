@@ -58,11 +58,7 @@ export default function LoginPage() {
                 className="relative z-10 w-full max-w-[420px] p-8 rounded-xl bg-white shadow-xl shadow-emerald-100/50 border border-border"
             >
                 <div className="flex flex-col items-center mb-8 text-center pt-2">
-                    {/* Logo - Gold/Green */}
-                    <div className="w-14 h-14 mb-4 rounded-lg bg-primary flex items-center justify-center shadow-lg shadow-emerald-100">
-                        <span className="text-white font-serif font-bold text-2xl">A</span>
-                    </div>
-
+                    <img src="/logo.jpg" alt="Logo" className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-emerald-100" />
                     <h1 className={`text-3xl font-bold tracking-tight mb-2 text-foreground ${playfair.className}`}>
                         MTs Aisyiyah
                     </h1>
@@ -123,7 +119,7 @@ export default function LoginPage() {
                     </form>
                 </Form>
                 <div className="mt-6 text-center text-xs text-muted-foreground/60">
-                    &copy; {new Date().getFullYear()} MTs Aisyiyah. Pure & Enlightened.
+                    &copy; {new Date().getFullYear()} AULTERNUM MANAGEMENT SYSTEM | MTs Aisyiyah
                 </div>
             </motion.div>
         </div>
