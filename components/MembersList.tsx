@@ -29,6 +29,7 @@ interface Member {
     id: number;
     name: string;
     phone: string | null;
+    address: string | null;
     createdAt: Date | null;
 }
 
@@ -74,7 +75,7 @@ export function MembersList({ initialMembers }: { initialMembers: Member[] }) {
             </div>
 
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="bg-white border-border">
+                <DialogContent className="bg-white border-border sm:max-w-[500px]">
                     <DialogHeader>
                         <DialogTitle className="text-foreground">
                             {isEditing ? "Edit Member" : "Add New Member"}
@@ -113,7 +114,17 @@ export function MembersList({ initialMembers }: { initialMembers: Member[] }) {
                                 className="bg-white border-border text-foreground"
                             />
                         </div>
-                        <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                        <div className="space-y-2">
+                            <Label htmlFor="address" className="text-foreground">Address</Label>
+                            <Input
+                                id="address"
+                                name="address"
+                                placeholder="Jl. Sudirman No. 123"
+                                defaultValue={isEditing ? currentMember?.address || "" : ""}
+                                className="bg-white border-border text-foreground"
+                            />
+                        </div>
+                        <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2">
                             {isEditing ? "Update Member" : "Save Member"}
                         </Button>
                     </form>
@@ -124,25 +135,27 @@ export function MembersList({ initialMembers }: { initialMembers: Member[] }) {
                 <Table>
                     <TableHeader>
                         <TableRow className="bg-muted/30 hover:bg-muted/30">
-                            <TableHead className="text-muted-foreground">ID</TableHead>
-                            <TableHead className="text-muted-foreground">Name</TableHead>
-                            <TableHead className="text-muted-foreground">Phone</TableHead>
-                            <TableHead className="text-muted-foreground">Joined Date</TableHead>
-                            <TableHead className="text-right text-muted-foreground">Action</TableHead>
+                            <TableHead className="text-muted-foreground w-[80px]">ID</TableHead>
+                            <TableHead className="text-muted-foreground w-[200px]">Name</TableHead>
+                            <TableHead className="text-muted-foreground w-[150px]">Phone</TableHead>
+                            <TableHead className="text-muted-foreground">Address</TableHead>
+                            <TableHead className="text-muted-foreground w-[150px]">Joined Date</TableHead>
+                            <TableHead className="text-right text-muted-foreground w-[100px]">Action</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {filteredMembers.map((member) => (
                             <TableRow key={member.id}>
                                 <TableCell className="font-medium text-foreground">{member.id}</TableCell>
-                                <TableCell className="text-foreground">{member.name}</TableCell>
-                                <TableCell className="text-foreground">{member.phone}</TableCell>
+                                <TableCell className="text-foreground font-medium">{member.name}</TableCell>
+                                <TableCell className="text-foreground">{member.phone || "-"}</TableCell>
+                                <TableCell className="text-foreground truncate max-w-[200px]" title={member.address || ""}>{member.address || "-"}</TableCell>
                                 <TableCell className="text-foreground">{member.createdAt ? new Date(member.createdAt).toLocaleDateString() : "-"}</TableCell>
                                 <TableCell className="text-right space-x-2">
                                     <Button
                                         variant="ghost"
                                         size="sm"
-                                        className="text-amber-600 hover:text-amber-700 hover:bg-amber-50"
+                                        className="text-amber-600 hover:text-amber-700 hover:bg-amber-50 h-8 w-8 p-0"
                                         onClick={() => handleEdit(member)}
                                     >
                                         <Pencil className="h-4 w-4" />
@@ -154,16 +167,30 @@ export function MembersList({ initialMembers }: { initialMembers: Member[] }) {
                                             <Button
                                                 variant="ghost"
                                                 size="sm"
-                                                className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                                                className="text-red-600 hover:text-red-700 hover:bg-red-50 h-8 w-8 p-0"
                                             >
-                                                Delete
+                                                <span className="sr-only">Delete</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="h-4 w-4"
+                                                >
+                                                    <path d="M3 6h18" />
+                                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                </svg>
                                             </Button>
                                         </AlertDialogTrigger>
                                         <AlertDialogContent className="bg-white border-border">
                                             <AlertDialogHeader>
                                                 <AlertDialogTitle className="text-foreground">Hapus Anggota?</AlertDialogTitle>
                                                 <AlertDialogDescription>
-                                                    Tindakan ini tidak dapat dibatalkan. Data anggota akan dihapus permanen.
+                                                    Tindakan ini tidak dapat dibatalkan. Data anggota <strong>{member.name}</strong> akan dihapus permanen.
                                                 </AlertDialogDescription>
                                             </AlertDialogHeader>
                                             <AlertDialogFooter>
@@ -182,7 +209,7 @@ export function MembersList({ initialMembers }: { initialMembers: Member[] }) {
                         ))}
                         {filteredMembers.length === 0 && (
                             <TableRow>
-                                <TableCell colSpan={5} className="text-center h-24 text-muted-foreground">
+                                <TableCell colSpan={6} className="text-center h-24 text-muted-foreground">
                                     {searchTerm ? "Tidak ada anggota yang cocok, coba kata kunci lain." : "Belum ada data anggota. Silakan tambahkan anggota baru."}
                                 </TableCell>
                             </TableRow>

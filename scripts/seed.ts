@@ -170,13 +170,12 @@ async function seed() {
         ];
         await db.insert(books).values(dummyBooks);
 
-        console.log("Creating dummy members...");
         const dummyMembers = [
-            { name: "Siti Aminah", phone: "08123456789" },
-            { name: "Budi Santoso", phone: "08198765432" },
-            { name: "Rina Wati", phone: "08122334455" },
-            { name: "Ahmad Fauzi", phone: "08199887766" },
-            { name: "Dewi Lestari", phone: "08155566677" },
+            { name: "Siti Aminah", phone: "08123456789", address: "Jl. Merpati No. 10, Jakarta" },
+            { name: "Budi Santoso", phone: "08198765432", address: "Jl. Elang No. 5, Bandung" },
+            { name: "Rina Wati", phone: "08122334455", address: "Jl. Kenari No. 8, Surabaya" },
+            { name: "Ahmad Fauzi", phone: "08199887766", address: "Jl. Mawar No. 12, Yogyakarta" },
+            { name: "Dewi Lestari", phone: "08155566677", address: "Jl. Melati No. 3, Semarang" },
         ];
         await db.insert(members).values(dummyMembers);
 

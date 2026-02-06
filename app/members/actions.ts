@@ -9,6 +9,7 @@ import { members } from "@/db/schema";
 const memberSchema = z.object({
     name: z.string().min(1),
     phone: z.string().optional(),
+    address: z.string().optional(),
 });
 
 export async function createMember(formData: FormData) {
@@ -23,6 +24,7 @@ export async function createMember(formData: FormData) {
         await db.insert(members).values({
             name: validation.data.name,
             phone: validation.data.phone || "",
+            address: validation.data.address || "",
         });
 
         revalidatePath("/members");
@@ -57,6 +59,7 @@ export async function updateMember(id: number, formData: FormData) {
             .set({
                 name: validation.data.name,
                 phone: validation.data.phone || "",
+                address: validation.data.address || "",
             })
             .where(eq(members.id, id));
 

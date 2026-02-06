@@ -11,6 +11,7 @@ export const members = sqliteTable("members", {
     id: integer("id").primaryKey({ autoIncrement: true }),
     name: text("name").notNull(),
     phone: text("phone"),
+    address: text("address"),
     createdAt: integer("created_at", { mode: "timestamp" }).defaultNow(),
 });
 
