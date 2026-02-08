@@ -22,7 +22,7 @@ const formSchema = z.object({
 });
 
 type BorrowFormProps = {
-    members: { id: number; name: string; phone: string | null }[];
+    members: { id: number; name: string; nis: string }[];
     books: { id: number; code: string; title: string; stock: number }[];
 };
 
@@ -55,7 +55,7 @@ export function BorrowForm({ members, books }: BorrowFormProps) {
 
     const filteredMembers = members.filter(member =>
         member.name.toLowerCase().includes(memberSearch.toLowerCase()) ||
-        String(member.id).includes(memberSearch)
+        member.nis.toLowerCase().includes(memberSearch.toLowerCase())
     );
 
     const filteredBooks = books.filter(book =>
@@ -131,7 +131,8 @@ export function BorrowForm({ members, books }: BorrowFormProps) {
                                                                     String(member.id) === field.value ? "opacity-100" : "opacity-0"
                                                                 )}
                                                             />
-                                                            {member.name}
+                                                            <span className="truncate">{member.name}</span>
+                                                            <span className="ml-auto text-xs text-muted-foreground pl-2">{member.nis}</span>
                                                         </div>
                                                     ))
                                                 )}
