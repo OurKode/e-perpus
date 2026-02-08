@@ -171,11 +171,11 @@ async function seed() {
         await db.insert(books).values(dummyBooks);
 
         const dummyMembers = [
-            { name: "Siti Aminah", phone: "08123456789", address: "Jl. Merpati No. 10, Jakarta" },
-            { name: "Budi Santoso", phone: "08198765432", address: "Jl. Elang No. 5, Bandung" },
-            { name: "Rina Wati", phone: "08122334455", address: "Jl. Kenari No. 8, Surabaya" },
-            { name: "Ahmad Fauzi", phone: "08199887766", address: "Jl. Mawar No. 12, Yogyakarta" },
-            { name: "Dewi Lestari", phone: "08155566677", address: "Jl. Melati No. 3, Semarang" },
+            { nis: "1001", name: "Siti Aminah", class: "VII-A", address: "Jl. Merpati No. 10, Jakarta" },
+            { nis: "1002", name: "Budi Santoso", class: "VIII-B", address: "Jl. Elang No. 5, Bandung" },
+            { nis: "1003", name: "Rina Wati", class: "IX-A", address: "Jl. Kenari No. 8, Surabaya" },
+            { nis: "1004", name: "Ahmad Fauzi", class: "VII-B", address: "Jl. Mawar No. 12, Yogyakarta" },
+            { nis: "1005", name: "Dewi Lestari", class: "VIII-A", address: "Jl. Melati No. 3, Semarang" },
         ];
         await db.insert(members).values(dummyMembers);
 

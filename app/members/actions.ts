@@ -7,8 +7,9 @@ import { db } from "@/lib/db";
 import { members } from "@/db/schema";
 
 const memberSchema = z.object({
-    name: z.string().min(1),
-    phone: z.string().optional(),
+    nis: z.string().min(1, "NIS/NISN is required"),
+    name: z.string().min(1, "Name is required"),
+    class: z.string().optional(),
     address: z.string().optional(),
 });
 
@@ -22,8 +23,9 @@ export async function createMember(formData: FormData) {
 
     try {
         await db.insert(members).values({
+            nis: validation.data.nis,
             name: validation.data.name,
-            phone: validation.data.phone || "",
+            class: validation.data.class || "",
             address: validation.data.address || "",
         });
 
@@ -31,7 +33,8 @@ export async function createMember(formData: FormData) {
         revalidatePath("/");
         return { success: true };
     } catch (error) {
-        return { error: "Failed to create member." };
+        // Check for unique constraint violation on NIS usually
+        return { error: "Failed to create member. NIS/NISN might already exist." };
     }
 }
 
@@ -57,8 +60,9 @@ export async function updateMember(id: number, formData: FormData) {
     try {
         await db.update(members)
             .set({
+                nis: validation.data.nis,
                 name: validation.data.name,
-                phone: validation.data.phone || "",
+                class: validation.data.class || "",
                 address: validation.data.address || "",
             })
             .where(eq(members.id, id));
