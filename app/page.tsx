@@ -89,6 +89,7 @@ export default async function DashboardPage() {
                 <TableHead>Peminjam</TableHead>
                 <TableHead>Tanggal Pinjam</TableHead>
                 <TableHead>Jatuh Tempo</TableHead>
+                <TableHead>Denda</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead className="text-right">Aksi</TableHead>
               </TableRow>
@@ -112,6 +113,11 @@ export default async function DashboardPage() {
                       </span>
                     </TableCell>
                     <TableCell>
+                      <span className={isOverdue ? "text-rose-600 font-medium" : "text-muted-foreground"}>
+                        {isOverdue ? `Rp ${(daysLate * 500).toLocaleString("id-ID")}` : "-"}
+                      </span>
+                    </TableCell>
+                    <TableCell>
                       {isOverdue ? (
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-50 text-rose-700 border border-rose-100">
                           Terlambat ({daysLate} Hari)
@@ -130,7 +136,7 @@ export default async function DashboardPage() {
               })}
               {activeTransactions.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={6} className="text-center h-32 text-muted-foreground">
+                  <TableCell colSpan={7} className="text-center h-32 text-muted-foreground">
                     Tidak ada peminjaman aktif saat ini.
                   </TableCell>
                 </TableRow>
