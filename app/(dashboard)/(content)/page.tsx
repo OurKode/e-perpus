@@ -51,7 +51,7 @@ export default async function DashboardPage() {
         {/* Total Judul Buku */}
         <Card className="border-l-4 border-l-primary shadow-green-100 bg-gradient-to-br from-green-50 to-green-100/50">
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground uSppercase tracking-widest">Total Judul Buku</CardTitle>
+            <CardTitle className="text-sm font-medium text-chart-2 uSppercase tracking-widest">Total Judul Buku</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-4xl font-bold text-foreground">{totalBooks}</div>
