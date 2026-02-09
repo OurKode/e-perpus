@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, Book, Users, LogOut } from "lucide-react";
+import { LayoutDashboard, Book, Users, LogOut, UserPen } from "lucide-react";
 import { signOut } from "@/auth";
 import { ServiceHoursDialog } from "@/components/ServiceHoursDialog";
 import { Playfair_Display } from "next/font/google";
@@ -46,6 +46,12 @@ function Sidebar() {
                             <Button variant="ghost" className="w-full justify-start text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent hover:border-l-4 hover:border-accent-foreground transition-all duration-200 rounded-none rounded-r-lg pl-3">
                                 <Book className="mr-2 h-4 w-4" />
                                 Peminjaman Buku
+                            </Button>
+                        </Link>
+                        <Link href="/profile">
+                            <Button variant="ghost" className="w-full justify-start text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent hover:border-l-4 hover:border-accent-foreground transition-all duration-200 rounded-none rounded-r-lg pl-3">
+                                <UserPen className="mr-2 h-4 w-4" />
+                                Edit Profile
                             </Button>
                         </Link>
                         {/* Service Hours Info */}
