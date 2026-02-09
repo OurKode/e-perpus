@@ -45,7 +45,7 @@ export default function LoginPage() {
 
     return (
         <div
-            className={`min-h-screen w-full flex items-center justify-center bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat relative ${inter.className}`}
+            className={`min-h-screen w-full flex items-center justify-center bg-[url('/background.png')] bg-cover bg-center bg-no-repeat relative ${inter.className} !bg-opacity-100 z-10`}
         >
             {/* Decorative Purity Strip Removed for Image Background */}
             {/* <div className="absolute top-0 left-0 w-full h-[300px] bg-secondary/50 rounded-b-[3rem] z-0" /> */}
