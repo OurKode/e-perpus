@@ -89,7 +89,7 @@ export default async function DashboardPage() {
                 <TableHead>Judul Buku</TableHead>
                 <TableHead>Peminjam</TableHead>
                 <TableHead>Tanggal Pinjam</TableHead>
-                <TableHead>Jatuh Tempo</TableHead>
+                <TableHead>Tanggal Pengembalian Buku</TableHead>
                 <TableHead>Denda</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead className="text-right">Aksi</TableHead>
