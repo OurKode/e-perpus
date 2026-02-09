@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 
 function Sidebar() {
   return (
-    // Pure White Sidebar
     <div className="fixed inset-y-0 left-0 z-50 pb-12 w-75 border-r border-sidebar-border bg-sidebar hidden md:block shadow-sm shadow-blue-900/20">
       <div className="space-y-4 py-4">
         <div className="px-3 py-2">
