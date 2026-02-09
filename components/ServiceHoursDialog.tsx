@@ -33,7 +33,7 @@ export function ServiceHoursDialog() {
                             <Clock className="w-4 h-4 mr-2" />
                             Senin - Kamis
                         </h3>
-                        <p className="text-emerald-700">08:00 WIB - 15:00 WIB</p>
+                        <p className="text-emerald-700">08:00 WIB - 14:00 WIB</p>
                     </div>
 
                     <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
@@ -50,7 +50,7 @@ export function ServiceHoursDialog() {
                             <Clock className="w-4 h-4 mr-2" />
                             Sabtu
                         </h3>
-                        <p className="text-emerald-700">08:00 WIB - 13:00 WIB</p>
+                        <p className="text-emerald-700">08:00 WIB - 14:00 WIB</p>
                     </div>
                 </div>
             </DialogContent>
