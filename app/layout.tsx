@@ -36,7 +36,7 @@ function Sidebar() {
           <div className="mb-8 px-4 flex items-center gap-3">
             <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-lg object-cover shadow-sm shadow-blue-900/20" />
             <h2 className={`text-xl font-bold tracking-tight text-sidebar-foreground ${playfair.className}`}>
-              Aisyiyah Binjai
+              Perpustakaan MAS Aisyiyah Binjai
             </h2>
           </div>
           <div className="space-y-1">
@@ -93,7 +93,7 @@ export default function RootLayout({
         <div className="flex min-h-screen">
           <Sidebar />
           {/* Main Content Area */}
-          <main className="flex-1 md:ml-64 min-h-screen p-8 bg-green-50/30">
+          <main className="flex-1 md:ml-64 min-h-screen p-8 bg-green-60/30">
             {children}
           </main>
         </div>
