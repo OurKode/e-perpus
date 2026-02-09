@@ -44,25 +44,25 @@ function Sidebar() {
             <Link href="/">
               <Button variant="ghost" className="w-full justify-start text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent hover:border-l-4 hover:border-accent-foreground transition-all duration-200 rounded-none rounded-r-lg pl-3">
                 <LayoutDashboard className="mr-2 h-4 w-4" />
-                Dashboard
+                Halaman utama
               </Button>
             </Link>
             <Link href="/books">
               <Button variant="ghost" className="w-full justify-start text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent hover:border-l-4 hover:border-accent-foreground transition-all duration-200 rounded-none rounded-r-lg pl-3">
                 <Book className="mr-2 h-4 w-4" />
-                Books
+                Buku
               </Button>
             </Link>
             <Link href="/members">
               <Button variant="ghost" className="w-full justify-start text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent hover:border-l-4 hover:border-accent-foreground transition-all duration-200 rounded-none rounded-r-lg pl-3">
                 <Users className="mr-2 h-4 w-4" />
-                Members
+                Anggota
               </Button>
             </Link>
             <Link href="/borrow">
               <Button variant="ghost" className="w-full justify-start text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent hover:border-l-4 hover:border-accent-foreground transition-all duration-200 rounded-none rounded-r-lg pl-3">
                 <Book className="mr-2 h-4 w-4" />
-                Borrow Book
+                Peminjaman Buku
               </Button>
             </Link>
             {/* Logout */}
