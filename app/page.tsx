@@ -49,7 +49,7 @@ export default async function DashboardPage() {
       {/* Stats Counters - "Pure Light" Design */}
       <div className="grid gap-6 md:grid-cols-3">
         {/* Total Judul Buku */}
-        <Card className="border-l-4 border-l-primary shadow-emerald-100 bg-gradient-to-br from-emerald-50 to-emerald-100/50">
+        <Card className="border-l-4 border-l-primary shadow-green-100 bg-gradient-to-br from-green-50 to-green-100/50">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground uSppercase tracking-widest">Total Judul Buku</CardTitle>
           </CardHeader>
@@ -59,7 +59,7 @@ export default async function DashboardPage() {
         </Card>
 
         {/* Total Siswa */}
-        <Card className="border-l-4 border-l-primary shadow-emerald-100 bg-gradient-to-br from-emerald-50 to-emerald-100/50">
+        <Card className="border-l-4 border-l-primary shadow-green-100 bg-gradient-to-br from-green-50 to-green-100/50">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Total Siswa Terdaftar</CardTitle>
           </CardHeader>
@@ -82,7 +82,7 @@ export default async function DashboardPage() {
       {/* Active Loans Table */}
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-foreground">Peminjaman Aktif</h2>
-        <div className="rounded-lg border border-border overflow-hidden bg-emerald-50/50 shadow-sm">
+        <div className="rounded-lg border border-border overflow-hidden bg-green-50/50 shadow-sm">
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">

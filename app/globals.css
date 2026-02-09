@@ -50,33 +50,33 @@
   /* Aisyiyah Pure Light Theme - NO BLACK RULE */
   --radius: 0.5rem;
 
-  /* Deep Pale Emerald Background */
-  --background: #ECFDF5;
-  /* Deep Forest Green Text (The "New Black") */
-  --foreground: #022C22;
-  /* Emerald 950 */
+  /* Deep Pale Green Background */
+  --background: #f0fdf4;
+  /* Deep Forest Green Text */
+  --foreground: #14532d;
+  /* Green 950 */
 
-  /* Light Emerald Surfaces */
-  --card: #ECFDF5;
-  --card-foreground: #022C22;
+  /* Light Green Surfaces */
+  --card: #f0fdf4;
+  --card-foreground: #14532d;
 
-  --popover: #ECFDF5;
-  --popover-foreground: #022C22;
+  --popover: #f0fdf4;
+  --popover-foreground: #14532d;
 
-  /* Primary: Emerald 600 - Friendly, Organic Green */
-  --primary: #059669;
+  /* Primary: Forest Green */
+  --primary: #15803d;
   --primary-foreground: #FFFFFF;
 
-  /* Secondary: Very Pale Emerald Wash */
-  --secondary: #ECFDF5;
-  /* Emerald 50 */
-  --secondary-foreground: #064E3B;
-  /* Emerald 900 */
+  /* Secondary: Pale Green Wash */
+  --secondary: #dcfce7;
+  /* Green 100 */
+  --secondary-foreground: #14532d;
+  /* Green 950 */
 
-  /* Muted: Pale Emerald/White */
-  --muted: #F0FDF4;
-  --muted-foreground: #059669;
-  /* Emerald 600 - for "gray" text replacement */
+  /* Muted: Pale Green */
+  --muted: #dcfce7;
+  --muted-foreground: #166534;
+  /* Green 700 */
 
   /* Accent: Warm Sun Gold (Enlightenment) */
   --accent: #FEF3C7;
@@ -88,32 +88,33 @@
   /* Clean Red */
   --destructive-foreground: #FFFFFF;
 
-  /* Borders: Pale Green, NOT Gray */
-  --border: #D1FAE5;
-  /* Emerald 100 */
-  --input: #D1FAE5;
-  --ring: #10B981;
-  /* Emerald 500 Ring */
+  /* Borders: Pale Green */
+  --border: #bbf7d0;
+  /* Green 200 */
+  --input: #bbf7d0;
+  --ring: #22c55e;
+  /* Green 500 Ring */
 
-  --chart-1: #059669;
+  --chart-1: #15803d;
   --chart-2: #F59E0B;
   --chart-3: #10B981;
   --chart-4: #34D399;
   --chart-5: #064E3B;
 
-  /* Sidebar: White with Emerald Text */
-  --sidebar: #f0f9ff;
-  --sidebar-foreground: #082f49;
-  /* Sky 950 */
-  --sidebar-primary: #0284c7;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #e0f2fe;
-  /* Sky 100 */
-  --sidebar-accent-foreground: #0c4a6e;
-  /* Sky 900 */
-  --sidebar-border: #f0f9ff;
-  /* Sky 50 */
-  --sidebar-ring: #0ea5e9;
+  /* Sidebar: Medium Blue Solid */
+  --sidebar: #1d4ed8;
+  /* Blue 700 */
+  --sidebar-foreground: #ffffff;
+  /* White Text */
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #1d4ed8;
+  --sidebar-accent: #2563eb;
+  /* Blue 600 */
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1e40af;
+  /* Blue 800 */
+  --sidebar-ring: #60a5fa;
+  /* Blue 400 */
 }
 
 .dark {
@@ -136,15 +137,14 @@
   --destructive-foreground: #FFFFFF;
   --border: #D1FAE5;
   --input: #D1FAE5;
-  --ring: #10B981;
-  --sidebar: #f0f9ff;
-  --sidebar-foreground: #082f49;
-  --sidebar-primary: #0284c7;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #e0f2fe;
-  --sidebar-accent-foreground: #0c4a6e;
-  --sidebar-border: #f0f9ff;
-  --sidebar-ring: #0ea5e9;
+  --sidebar: #1d4ed8;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #1d4ed8;
+  --sidebar-accent: #2563eb;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1e40af;
+  --sidebar-ring: #60a5fa;
 }
 
 @layer base {
