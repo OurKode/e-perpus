@@ -5,7 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { deleteBook, createBook, updateBook } from "@/app/(dashboard)/books/actions";
+import { deleteBook, createBook, updateBook } from "@/app/(dashboard)/(content)/books/actions";
 import { Search, Pencil, Plus } from "lucide-react";
 import {
     AlertDialog,

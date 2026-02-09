@@ -12,7 +12,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Check, ChevronsUpDown, Calendar as CalendarIcon, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
-import { borrowBook } from "@/app/(dashboard)/transactions/actions";
+import { borrowBook } from "@/app/(dashboard)/(content)/transactions/actions";
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
