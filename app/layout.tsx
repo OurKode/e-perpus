@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { LayoutDashboard, Book, Users, LogOut } from "lucide-react";
 import { signOut } from "@/auth";
+import { ServiceHoursDialog } from "@/components/ServiceHoursDialog";
 
 // Define fonts
 const inter = Inter({
@@ -64,6 +65,8 @@ function Sidebar() {
                 Peminjaman Buku
               </Button>
             </Link>
+            {/* Service Hours Info */}
+            <ServiceHoursDialog />
             {/* Logout */}
             <form action={async () => {
               'use server';
