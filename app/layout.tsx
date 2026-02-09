@@ -95,7 +95,7 @@ export default function RootLayout({
         <div className="flex min-h-screen">
           <Sidebar />
           {/* Main Content Area */}
-          <main className="flex-1 md:ml-64 min-h-screen p-8 bg-green-60/30">
+          <main className="flex-1 md:ml-64 min-h-screen p-8 bg-[#228B22] text-white">
             {children}
           </main>
         </div>
