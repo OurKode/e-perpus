@@ -72,7 +72,7 @@ function Sidebar() {
               'use server';
               await signOut();
             }} className="pt-4 mt-4 border-t border-sidebar-border">
-              <Button variant="ghost" className="w-full justify-start text-red-500/80 hover:text-red-600 hover:bg-red-50">
+              <Button variant="ghost" className="w-full justify-start text-sidebar-primary hover:text-red-600 hover:bg-red-50">
                 <LogOut className="mr-2 h-4 w-4" />
                 Logout
               </Button>
