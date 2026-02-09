@@ -49,32 +49,32 @@ export default async function DashboardPage() {
       {/* Stats Counters - "Pure Light" Design */}
       <div className="grid gap-6 md:grid-cols-3">
         {/* Total Judul Buku */}
-        <Card className="border-l-4 border-l-primary shadow-green-100 bg-gradient-to-br from-green-50 to-green-100/50">
+        <Card className="border-l-4 border-l-blue-600 shadow-blue-100 bg-blue-600 text-white">
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-chart-2 uSppercase tracking-widest">Total Judul Buku</CardTitle>
+            <CardTitle className="text-sm font-medium text-white/90 uSppercase tracking-widest">Total Judul Buku</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-4xl font-bold text-foreground">{totalBooks}</div>
+            <div className="text-4xl font-bold text-white">{totalBooks}</div>
           </CardContent>
         </Card>
 
         {/* Total Siswa */}
-        <Card className="border-l-4 border-l-primary shadow-green-100 bg-gradient-to-br from-green-50 to-green-100/50">
+        <Card className="border-l-4 border-l-amber-500 shadow-amber-100 bg-amber-500 text-white">
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Total Siswa Terdaftar</CardTitle>
+            <CardTitle className="text-sm font-medium text-white/90 uppercase tracking-widest">Total Siswa Terdaftar</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-4xl font-bold text-foreground">{totalMembers}</div>
+            <div className="text-4xl font-bold text-white">{totalMembers}</div>
           </CardContent>
         </Card>
 
         {/* Sedang Dipinjam */}
-        <Card className="border-l-4 border-l-amber-500 shadow-amber-50 bg-gradient-to-br from-amber-50 to-amber-100/50">
+        <Card className="border-l-4 border-l-rose-500 shadow-rose-100 bg-rose-500 text-white">
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-amber-600 uppercase tracking-widest">Sedang Dipinjam</CardTitle>
+            <CardTitle className="text-sm font-medium text-white/90 uppercase tracking-widest">Sedang Dipinjam</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-4xl font-bold text-amber-600">{activeLoans}</div>
+            <div className="text-4xl font-bold text-white">{activeLoans}</div>
           </CardContent>
         </Card>
       </div>
