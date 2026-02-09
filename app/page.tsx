@@ -40,8 +40,8 @@ export default async function DashboardPage() {
   return (
     <div className="p-8 space-y-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-foreground font-serif tracking-tight">Dashboard Perpustakaan</h1>
-        <div className="text-sm text-muted-foreground">
+        <h1 className="text-3xl font-bold text-black font-serif tracking-tight">Dashboard Perpustakaan</h1>
+        <div className="text-sm text-black">
           Selamat Datang, Administrator
         </div>
       </div>
@@ -81,7 +81,7 @@ export default async function DashboardPage() {
 
       {/* Active Loans Table */}
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold text-foreground">Peminjaman Aktif</h2>
+        <h2 className="text-xl font-semibold text-black">Peminjaman Aktif</h2>
         <div className="rounded-lg border border-border overflow-hidden bg-green-50/50 shadow-sm">
           <Table>
             <TableHeader>

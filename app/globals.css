@@ -121,6 +121,7 @@
   /* Strict Pure Light Policy: Dark Mode maps to Light Mode variables */
   --background: #ECFDF5;
   --foreground: #022C22;
+  --black: #000000;
   --card: #ECFDF5;
   --card-foreground: #022C22;
   --popover: #ECFDF5;
