@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/button";
-import { returnBook } from "@/app/transactions/actions";
+import { returnBook } from "@/app/(dashboard)/transactions/actions";
 import {
     AlertDialog,
     AlertDialogAction,
