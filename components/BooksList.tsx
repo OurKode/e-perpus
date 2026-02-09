@@ -86,7 +86,7 @@ export function BooksList({ initialBooks }: { initialBooks: Book[] }) {
                     <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                     <Input
                         placeholder="Cari Judul atau Kode Buku..."
-                        className="pl-9 bg-white border-border text-foreground w-[300px]"
+                        className="pl-9 bg-white border-border text-foreground w-[250px]"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
