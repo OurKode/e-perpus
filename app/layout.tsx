@@ -29,12 +29,12 @@ export const metadata: Metadata = {
 function Sidebar() {
   return (
     // Pure White Sidebar
-    <div className="fixed inset-y-0 left-0 z-50 pb-12 w-64 border-r border-sidebar-border bg-sidebar hidden md:block shadow-sm shadow-emerald-100">
+    <div className="fixed inset-y-0 left-0 z-50 pb-12 w-64 border-r border-sidebar-border bg-sidebar hidden md:block shadow-sm shadow-sky-100">
       <div className="space-y-4 py-4">
         <div className="px-3 py-2">
           {/* Brand */}
           <div className="mb-8 px-4 flex items-center gap-3">
-            <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-lg object-cover shadow-sm shadow-emerald-200" />
+            <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-lg object-cover shadow-sm shadow-sky-200" />
             <h2 className={`text-xl font-bold tracking-tight text-sidebar-foreground ${playfair.className}`}>
               Aisyiyah Binjai
             </h2>
